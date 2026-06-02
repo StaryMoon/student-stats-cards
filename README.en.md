@@ -15,7 +15,7 @@ _README SVG cards for students: coding, research, open-source PRs and study stre
 ## Quick Start
 
 ```md
-![Student Stats](https://your-deployment.vercel.app/api/student?name=Minghao%20Liu&school=Peking%20University&github=StaryMoon&papers=2&prs=4&anki=128)
+![Student Stats](https://student-stats-cards.vercel.app/api/student?name=Minghao%20Liu&school=Peking%20University&github=StaryMoon&papers=2&prs=4&anki=128)
 ```
 
 If you deploy your own instance, replace the domain with your Vercel URL.
