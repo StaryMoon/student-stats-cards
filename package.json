@@ -1,7 +1,7 @@
 {
-  "name": "readme-stats",
-  "version": "0.1.0",
-  "description": "",
+  "name": "student-stats-cards",
+  "version": "0.2.0",
+  "description": "Student-friendly SVG stats cards for GitHub profile README.",
   "main": "app.js",
   "scripts": {
     "start": "node ./app.js",
@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/songquanpeng/readme-stats.git"
+    "url": "git+https://github.com/StaryMoon/student-stats-cards.git"
   },
-  "author": "",
+  "author": "Minghao Liu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/songquanpeng/readme-stats/issues"
+    "url": "https://github.com/StaryMoon/student-stats-cards/issues"
   },
-  "homepage": "https://github.com/songquanpeng/readme-stats#readme",
+  "homepage": "https://github.com/StaryMoon/student-stats-cards#readme",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^1.16.1",
     "cheerio": "^1.0.0-rc.5",
     "express": "^4.17.1",
     "form-data": "^4.0.0",
@@ -27,13 +27,13 @@
     "serve-static": "^1.15.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7",
+    "nodemon": "^3.1.14",
     "prettier": "^2.2.1"
   },
   "prettier": {
     "singleQuote": true
   },
   "engines": {
-    "node": "16.x"
+    "node": ">=16"
   }
 }

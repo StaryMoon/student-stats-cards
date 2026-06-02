@@ -9,6 +9,7 @@ const juejin = require('./api/juejin');
 const csdn = require('./api/csdn');
 const nowcoder = require('./api/nowcoder');
 const github = require('./api/github');
+const student = require('./api/student');
 const mycard = require('./api/mycard');
 const steam = require('./api/steam');
 const codeforces = require('./api/codeforces');
@@ -23,10 +24,11 @@ app.use('/api/juejin', juejin);
 app.use('/api/csdn', csdn);
 app.use('/api/nowcoder', nowcoder);
 app.use('/api/github', github);
+app.use('/api/student', student);
 app.use('/api/website', website);
-app.use('/api/mycard',mycard);
-app.use('/api/steam',steam);
-app.use('api/codeforces', codeforces)
+app.use('/api/mycard', mycard);
+app.use('/api/steam', steam);
+app.use('/api/codeforces', codeforces);
 
 app.use(
   serveStatic(path.join(__dirname, 'public'), {
