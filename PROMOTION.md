@@ -23,7 +23,7 @@ Student-friendly SVG cards for GitHub profile README: research, LeetCode, open-s
 示例：
 
 ```md
-![Student Stats](https://student-stats-cards.vercel.app/api/student?name=Minghao%20Liu&school=Peking%20University&github=StaryMoon&papers=2&prs=4&anki=128&lang=zh-CN)
+![Student Stats](https://your-deployment.vercel.app/api/student?name=Minghao%20Liu&school=Peking%20University&github=StaryMoon&papers=2&prs=4&anki=128&lang=zh-CN)
 ```
 
 这个项目适合几类人：
