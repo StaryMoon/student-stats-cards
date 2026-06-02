@@ -2,18 +2,18 @@ const express = require('express');
 const http = require('http');
 const serveStatic = require('serve-static');
 const app = express();
-const zhihu = require('./api/zhihu');
-const bilibili = require('./api/bilibili');
-const leetcode = require('./api/leetcode');
-const juejin = require('./api/juejin');
-const csdn = require('./api/csdn');
-const nowcoder = require('./api/nowcoder');
-const github = require('./api/github');
-const student = require('./api/student');
-const mycard = require('./api/mycard');
-const steam = require('./api/steam');
-const codeforces = require('./api/codeforces');
-const website = require('./api/website');
+const zhihu = require('./routes/zhihu');
+const bilibili = require('./routes/bilibili');
+const leetcode = require('./routes/leetcode');
+const juejin = require('./routes/juejin');
+const csdn = require('./routes/csdn');
+const nowcoder = require('./routes/nowcoder');
+const github = require('./routes/github');
+const student = require('./routes/student');
+const mycard = require('./routes/mycard');
+const steam = require('./routes/steam');
+const codeforces = require('./routes/codeforces');
+const website = require('./routes/website');
 const path = require('path');
 const { cacheTime } = require('./common/cache');
 
@@ -36,8 +36,9 @@ app.use(
   })
 );
 
-const server = http.createServer(app);
-
-server.listen(process.env.PORT || 3000);
+if (require.main === module) {
+  const server = http.createServer(app);
+  server.listen(process.env.PORT || 3000);
+}
 
 module.exports = app;
