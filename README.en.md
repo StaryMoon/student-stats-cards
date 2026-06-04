@@ -20,6 +20,34 @@ _README SVG cards for students: coding, research, open-source PRs and study stre
 
 If you deploy your own instance, replace the domain with your Vercel URL.
 
+## Profile README Gallery
+
+Copy one of these snippets into your GitHub Profile README.
+
+### Research Student
+
+```md
+![Research Student Card](https://student-stats-cards.vercel.app/api/student?name=Minghao%20Liu&school=Peking%20University%20%7C%20Image%20Restoration&github=StaryMoon&papers=3&projects=6&prs=6&anki=180)
+```
+
+### Job Hunting
+
+```md
+![Job Hunting Card](https://student-stats-cards.vercel.app/api/student?name=Your%20Name&school=CS%20Student%20%7C%20Backend%20Engineer&github=your_github&leetcode=your_leetcode&projects=5&prs=8&streak=120&theme=tokyonight)
+```
+
+### Open Source Contributor
+
+```md
+![Open Source Card](https://student-stats-cards.vercel.app/api/student?name=Open%20Source%20Student&school=Docs%20%2B%20Tools%20Contributor&github=your_github&prs=20&projects=4&stars=120&followers=30&theme=gruvbox)
+```
+
+### Study Streak
+
+```md
+![Study Streak Card](https://student-stats-cards.vercel.app/api/student?name=Daily%20Learner&school=Anki%20%2B%20LeetCode%20%2B%20Research&github=your_github&leetcode=your_leetcode&anki=365&streak=365&theme=light)
+```
+
 ## Student Card API
 
 Endpoint:
