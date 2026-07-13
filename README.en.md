@@ -13,7 +13,7 @@ _README SVG cards for students: coding, research, study streaks, and verifiable 
 `Student Stats Cards` is a student-friendly fork of [songquanpeng/stats-cards](https://github.com/songquanpeng/stats-cards). It keeps the original platform cards and adds compact student and open-source impact cards for GitHub README pages.
 
 <p align="center">
-  <img src="https://student-stats-cards.vercel.app/api/contributor?username=StaryMoon&amp;scan=10&amp;limit=3&amp;theme=tokyonight" alt="StaryMoon open source contribution card" width="495">
+  <img src="assets/examples/open-source-impact.svg" alt="StaryMoon open source contribution card" width="495">
 </p>
 
 ## Quick Start
@@ -83,7 +83,7 @@ Useful query parameters:
 The contributor card automatically reads public pull requests merged outside the user's own repositories. It shows the total merged PR count, recently analyzed upstream repositories, their combined public stars, the highest-star upstream, and recent merges.
 
 ```md
-![Open Source Impact](https://student-stats-cards.vercel.app/api/contributor?username=StaryMoon&scan=10&limit=3&theme=tokyonight)
+![Open Source Impact](https://your-deployment.vercel.app/api/contributor?username=StaryMoon&scan=10&limit=3&theme=tokyonight)
 ```
 
 | Parameter | Description |
