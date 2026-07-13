@@ -73,7 +73,7 @@ module.exports = async (req, res) => {
     theme,
   };
 
-  if (raw) {
+  if (raw === 'true') {
     return res.json(data);
   }
 

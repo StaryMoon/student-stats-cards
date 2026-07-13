@@ -3,7 +3,7 @@ const axios = require('axios');
 let config = {};
 if (process.env['GITHUB_TOKEN']) {
   config = {
-    headers: { Authorization: `Bearer ${process.env['GITHUB_TOKEN']}` }
+    headers: { Authorization: `Bearer ${process.env['GITHUB_TOKEN']}` },
   };
 }
 
@@ -17,7 +17,7 @@ async function getGitHubInfo(username) {
     watchers: 0,
     following: 0,
     issues: 0,
-    gists: 0
+    gists: 0,
   };
 
   try {
@@ -33,10 +33,13 @@ async function getGitHubInfo(username) {
     result.gists = userInfo.public_gists;
     for (let i = 0; i < result.repos / 100; i++) {
       let res = await axios.get(
-        `https://api.github.com/users/${username}/repos?per_page=100&page=${i + 1}`
+        `https://api.github.com/users/${username}/repos?per_page=100&page=${
+          i + 1
+        }`,
+        config
       );
       let repos = res.data;
-      repos.forEach(repo => {
+      repos.forEach((repo) => {
         result.stars += repo.stargazers_count;
         result.forks += repo.forks;
         result.watchers += repo.watchers;

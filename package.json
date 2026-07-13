@@ -1,11 +1,12 @@
 {
   "name": "student-stats-cards",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Student-friendly SVG stats cards for GitHub profile README.",
   "main": "app.js",
   "scripts": {
     "start": "node ./app.js",
-    "test": "node ./test.js",
+    "test": "node --test test/*.test.js",
+    "format:check": "prettier --check app.js crawler/github.js crawler/github-contributions.js routes/student.js routes/contributor.js render/contributor.js test/*.test.js",
     "devStart": "nodemon ./app.js"
   },
   "repository": {

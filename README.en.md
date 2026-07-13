@@ -6,11 +6,15 @@
 
 # Student Stats Cards
 
-_README SVG cards for students: coding, research, open-source PRs and study streaks._
+_README SVG cards for students: coding, research, study streaks, and verifiable open-source impact._
 
 </div>
 
-`Student Stats Cards` is a student-friendly fork of [songquanpeng/stats-cards](https://github.com/songquanpeng/stats-cards). It keeps the original platform cards and adds `/api/student`, a compact profile card for GitHub README pages.
+`Student Stats Cards` is a student-friendly fork of [songquanpeng/stats-cards](https://github.com/songquanpeng/stats-cards). It keeps the original platform cards and adds compact student and open-source impact cards for GitHub README pages.
+
+<p align="center">
+  <img src="https://student-stats-cards.vercel.app/api/contributor?username=StaryMoon&amp;scan=10&amp;limit=3&amp;theme=tokyonight" alt="StaryMoon open source contribution card" width="495">
+</p>
 
 ## Quick Start
 
@@ -74,12 +78,34 @@ Useful query parameters:
 | `lang` | Use `zh-CN` for Chinese labels |
 | `raw=true` | Return raw JSON |
 
+## Open Source Impact Card
+
+The contributor card automatically reads public pull requests merged outside the user's own repositories. It shows the total merged PR count, recently analyzed upstream repositories, their combined public stars, the highest-star upstream, and recent merges.
+
+```md
+![Open Source Impact](https://student-stats-cards.vercel.app/api/contributor?username=StaryMoon&scan=10&limit=3&theme=tokyonight)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `username` | Required GitHub username |
+| `scan` | Recent merged PRs analyzed for upstream metrics, `3-30`, default `10` |
+| `limit` | Recent PR rows displayed, `1-5`, default `3` |
+| `theme` | Theme such as `light`, `tokyonight`, or `gruvbox` |
+| `lang` | Use `zh-CN` for Chinese labels |
+| `raw=true` | Return auditable JSON with PR and repository links |
+
+The total merged PR count comes from GitHub search. Upstream repository and star metrics cover only the recent `scan` sample, which keeps the API workload bounded and the displayed scope explicit.
+
+Set `GITHUB_TOKEN` in production. The card performs repository metadata requests, and anonymous GitHub API limits are easy to exhaust on a shared deployment.
+
 ## Local Development
 
 ```shell
 git clone https://github.com/StaryMoon/student-stats-cards.git
 cd student-stats-cards
 npm install
+npm test
 npm start
 ```
 
@@ -87,6 +113,12 @@ Open:
 
 ```text
 http://localhost:3000/api/student?name=Minghao%20Liu&school=Peking%20University&github=StaryMoon&papers=2&prs=4&anki=128
+```
+
+Open-source impact card:
+
+```text
+http://localhost:3000/api/contributor?username=StaryMoon&scan=10&limit=3&theme=tokyonight
 ```
 
 ## Credits
